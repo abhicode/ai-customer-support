@@ -1,8 +1,9 @@
 # AI Customer Support Chatbot  
 
 An end-to-end AI-powered support system built with **FastAPI**, **MLflow**, **FAISS**, and **Next.js**.  
-The chatbot handles customer queries, retrieves answers from a knowledge base, tracks conversation context, and connects to human support when needed.  
+The chatbot handles customer queries, retrieves answers from a knowledge base, tracks conversation context, and connects to human support when needed.
 
+<img width="1856" height="1007" alt="Screenshot from 2025-09-18 01-47-42" src="https://github.com/user-attachments/assets/053d045e-d312-49ef-b810-be21973c0fa1" />
 <video src="https://github.com/user-attachments/assets/51b0335f-84f8-4342-a422-5b7ed1636ca2" autoplay muted loop controls width="600"></video>
 
 ## Features  
