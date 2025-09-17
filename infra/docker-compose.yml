@@ -1,0 +1,93 @@
+version: "3.9"
+
+services:
+  frontend:
+    build: ../frontend
+    container_name: frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - orchestrator
+
+  redis:
+    image: redis:7-alpine
+    container_name: redis
+    ports:
+      - "6379:6379"
+
+  orchestrator:
+    build: ../services/orchestrator
+    container_name: orchestrator
+    ports:
+      - "8000:8000"
+    environment:
+      - REDIS_HOST=${REDIS_HOST}
+      - REDIS_PORT=${REDIS_PORT}
+      - INTENT_SERVICE_URL=http://intent-service:8000/v1/intents
+      - RESPONSE_SERVICE_URL=http://response-service:8000/v1/respond
+    depends_on:
+      - redis
+      - intent-service
+      - response-service
+      - kb-service
+
+  intent-service:
+    build: ../services/intent-service
+    container_name: intent-service
+    ports:
+      - "8001:8000"
+    environment:
+      - MLFLOW_TRACKING_URI=${MLFLOW_TRACKING_URI}
+      - MLFLOW_MODEL_NAME=${MLFLOW_MODEL_NAME}
+      - MLFLOW_MODEL_STAGE=${MLFLOW_MODEL_STAGE}
+    volumes:
+      - ./mlflow:/mlflow
+    
+  response-service:
+    build: ../services/response-service
+    container_name: response-service
+    ports:
+      - "8002:8000"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+
+  kb-service:
+    build: ../services/kb-service
+    container_name: kb-service
+    ports:
+      - "8003:8000"
+    environment:
+      - DATA_DIR=${DATA_DIR}
+      - INDEX_FILE=${INDEX_FILE}
+      - DOCS_FILE=${DOCS_FILE}
+    volumes:
+      - ./data:/app/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+  
+  mlflow:
+    image: ghcr.io/mlflow/mlflow:v2.14.1
+    container_name: mlflow
+    command: >
+      mlflow server
+      --backend-store-uri sqlite:///mlflow.db
+      --default-artifact-root /mlflow/artifacts
+      --host 0.0.0.0
+      --port 5000
+    volumes:
+      - ./mlflow:/mlflow
+    ports:
+      - "5000:5000"
+  
+  trainer:
+    build: ../training
+    depends_on:
+      - mlflow
+    volumes:
+    - ./mlflow:/mlflow
+  
+

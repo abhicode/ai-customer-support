@@ -1,0 +1,156 @@
+text,intent
+hi,greeting
+hello,greeting
+good morning,greeting
+I want a refund,refund
+money back please,refund
+return my order,refund
+where is my order,order_status
+track my package,order_status
+order status,order_status
+your service is bad,complaint
+not happy with support,complaint
+bye,farewell
+see you later,farewell
+tell me about product X,product_info
+details of item 123,product_info
+talk to an agent,support_contact
+customer care number,support_contact
+text,intent
+hi,greeting
+hello,greeting
+good morning,greeting
+hey,greeting
+good evening,greeting
+what’s up,greeting
+I want a refund,refund
+money back please,refund
+return my order,refund
+I need my money returned,refund
+how do I get a refund,refund
+process my refund,refund
+where is my order,order_status
+track my package,order_status
+order status,order_status
+can you tell me when my order arrives,order_status
+check delivery status,order_status
+has my parcel shipped,order_status
+your service is bad,complaint
+not happy with support,complaint
+this is disappointing,complaint
+I want to complain,complaint
+poor service experience,complaint
+bye,farewell
+see you later,farewell
+good night,farewell
+take care,farewell
+talk to you soon,farewell
+tell me about product X,product_info
+details of item 123,product_info
+give me info on product Y,product_info
+specifications of model 456,product_info
+what features does product Z have,product_info
+talk to an agent,support_contact
+customer care number,support_contact
+I want to speak to support,support_contact
+connect me with a representative,support_contact
+how can I reach customer service,support_contact
+text,intent
+could you customer care number quickly,support_contact
+can you hey please,greeting
+how do I track my package please,order_status
+how do I give me support contact now,support_contact
+how do I yo,greeting
+can you order status urgently,order_status
+I want to I am very upset now,complaint
+can you money back please please,refund
+how do I refund my purchase quickly,refund
+can you refund my purchase please,refund
+how do I refund my purchase urgently,refund
+how do I talk to an agent now,support_contact
+I need to describe item 789 please,product_info
+connect me with a representative,support_contact
+how do I yo now,greeting
+give me support contact,support_contact
+how do I good morning please,greeting
+issue a refund,refund
+how do I refund my purchase now,refund
+how do I hey please,greeting
+how do I call center number now,support_contact
+how do I I am very upset please,complaint
+could you describe item 789 quickly,product_info
+put me through to an agent,support_contact
+I need to track my package please,order_status
+how do I where’s my parcel now,order_status
+could you your service is bad quickly,complaint
+catch you later,farewell
+how do I peace out please,farewell
+refund my purchase,refund
+I want to details of item 123 urgently,product_info
+can you where’s my parcel please,order_status
+how do I process my refund please,refund
+hiya,greeting
+how do I order status urgently,order_status
+hey,greeting
+how do I not happy with support please,complaint
+good morning,greeting
+not happy with support,complaint
+please hi now,greeting
+how do I request a refund urgently,refund
+how do I I am very upset please,complaint
+how do I return my order quickly,refund
+how do I check delivery status now,order_status
+I need help from customer care,support_contact
+how do I hi there urgently,greeting
+can you track my package urgently,order_status
+can you refund my purchase now,refund
+hiya,greeting
+refund my purchase,refund
+bad experience,complaint
+I want to I am very upset quickly,complaint
+how do I see you later quickly,farewell
+how do I track my package now,order_status
+how do I terrible support now,complaint
+how do I return my order urgently,refund
+good night,farewell
+I want to hi there quickly,greeting
+I need to see you later please,farewell
+worst service ever,complaint
+give me a refund,refund
+how do I later please,farewell
+I want to check delivery status now,order_status
+how do I I want my money back now,refund
+can you return my order urgently,refund
+how do I order status please,order_status
+goodbye,farewell
+this is unacceptable,complaint
+how do I terrible support quickly,complaint
+could you see you later quickly,farewell
+can you peace out now,farewell
+how do I describe item 789 now,product_info
+how do I later now,farewell
+how do I talk to an agent urgently,support_contact
+how do I see you later now,farewell
+could you transfer me to support please,support_contact
+can you see you later please,farewell
+how do I refund my purchase urgently,refund
+how do I customer care number quickly,support_contact
+I need to refund my purchase urgently,refund
+I want to request a refund quickly,refund
+I’m off,farewell
+how do I refund my purchase quickly,refund
+peace out,farewell
+could you talk to you soon quickly,farewell
+how do I refund my purchase please,refund
+how do I request a refund quickly,refund
+not satisfied with your service,complaint
+how do I connect me with a representative urgently,support_contact
+how do I peace out quickly,farewell
+how do I later quickly,farewell
+I need to peace out please,farewell
+good evening,greeting
+please I am very upset now,complaint
+can you where is my order please,order_status
+could you check delivery status now,order_status
+where’s my parcel now,order_status
+please bad experience please,complaint
