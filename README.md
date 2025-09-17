@@ -3,6 +3,8 @@
 An end-to-end AI-powered support system built with **FastAPI**, **MLflow**, **FAISS**, and **Next.js**.  
 The chatbot handles customer queries, retrieves answers from a knowledge base, tracks conversation context, and connects to human support when needed.  
 
+<video src="https://github.com/user-attachments/assets/51b0335f-84f8-4342-a422-5b7ed1636ca2" autoplay muted loop controls width="600"></video>
+
 ## Features  
 - **Conversational AI**: Handles customer queries via `/v1/conversations`.  
 - **Knowledge Base (`FAISS`)**: Stores documents and provides context-aware responses.  
