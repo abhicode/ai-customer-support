@@ -29,6 +29,11 @@ The chatbot handles customer queries, retrieves answers from a knowledge base, t
 - **AI Models**: `Sentence Transformers`, `Logistic Regression (MLflow)`, `OpenAI GPT`  
 - **Deployment**: `Docker Compose` 
 
+## Demo Flow
+1. User sends a message from the frontend.
+2. Orchestrator routes request → intent detection, KB retrieval, LLM response.
+3. Response returned with context persistence in Redis.
+
 ## Getting Started  
 ### Prerequisites  
 - `Docker` & `Docker Compose` installed  
@@ -57,3 +62,17 @@ docker-compose run --rm trainer
 docker-compose up -d --build frontend
 ```
 Runs on http://localhost:3000
+
+#### 6. Add FAQs or policies to the KB service via `http://localhost:8003/add`
+```json
+{
+  "docs": [
+    "Refunds for orders can take 5-7 business days.",
+    "Premium users get priority responses within 2 hours."
+  ]
+}
+```
+### Future Improvements
+- Integration with external databases (orders, accounts).
+- Authentication & RBAC.
+- Analytics dashboard for query trends.
