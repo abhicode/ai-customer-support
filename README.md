@@ -40,9 +40,27 @@ The chatbot handles customer queries, retrieves answers from a knowledge base, t
 - OpenAI API key (`OPENAI_API_KEY`)  
 
 ### Run Services
-#### 1. Change current directory to "infra"
+#### 1. Change the current directory to "infra" and create a `.env` file
 ```bash
 cd infra
+```
+```bash
+# Redis
+REDIS_HOST=redis
+REDIS_PORT=6379
+
+# MLflow
+MLFLOW_TRACKING_URI=http://mlflow:5000
+MLFLOW_MODEL_NAME=customer_intent_classifier
+MLFLOW_MODEL_STAGE=Production
+
+# OpenAI
+OPENAI_API_KEY=sk-proj-***
+
+# KB Service
+DATA_DIR=/app/data
+INDEX_FILE=/app/data/faiss.index
+DOCS_FILE=/app/data/docs.pkl
 ```
 #### 2. Run MLflow
 ```bash
